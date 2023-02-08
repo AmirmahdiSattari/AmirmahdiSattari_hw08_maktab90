@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Poppins:wght@100;400;700&family=Press+Start+2P&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;400;700&display=swap');
+
+*{
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+
+    /* colors */
+    --color-gray:#333333;
+    --color-white:#E1E1E1;
+    --color-blue:#2690D4;
+    --color-dark-blue:#0c4267;
+    --color-black:#000000;
+    /* padding section */
+    --paddingSmall:1rem;
+    --paddingMedium:2rem;
+    --paddingBig:3rem;
+
+    /* margins */
+    --marginSmall:.5rem;
+    --marginMedium:1rem;
+    --marginBig:.5rem;
+
+    /*font size*/
+    --fontSizeHeader:1.5rem;
+    --fontSizeSmall:1rem;
+    --fontSizeMedium:2rem;
+    --fontSizeBig:3rem;
+}
+body{
+
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.header,.webApplication,.dataContiner,
+.boxContainer,.data,.Contact,.contactUs,
+.AboutOurCompany,.footer,.box{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* padding: var(--paddingMedium); */
+
+}
+.header{
+    flex-direction: column;
+    height: 15rem;
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    padding: var(--paddingMedium);
+}
+.headerText,.dataHeader{
+    font-size: var(--fontSizeHeader);
+    font-weight: 500;
+}
+.dataheader{
+    font-size: var(--fontSizeSmall);
+    font-weight: 600;
+}
+.description{
+    padding: var(--paddingSmall);
+}
+.btnReadMore{
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    border: .1rem solid #e1e1e148;
+    border-radius: .3rem;
+    padding: .5rem;
+}
+.webApplication{
+    flex-direction: column;
+    padding: var(--paddingMedium);
+}
+.dataContiner{
+   
+    flex-direction: row;
+    padding: var(--paddingMedium);
+    
+}
+.boxContainer{
+    background-color: var(--color-gray);
+    padding: var(--paddingMedium);
+    
+}
+.box{
+    height: 15rem;
+    width: 20rem;
+    flex-direction: column;
+    background-color:var(--color-white);
+    margin: var(--marginSmall);
+}
+.headerData{
+    padding: var(--paddingSmall);
+}
+.boxContent{
+    padding: var(--paddingSmall);
+}
+.data{
+    flex-direction: column;
+    padding: var(--paddingMedium);
+}
+.dataHeader{
+    padding: var(--paddingSmall);
+}
+.Contact{
+    flex-direction: row;
+    
+}
+.contactUs{
+    width: 50%;
+    height: 10rem;
+    flex-direction: column;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    padding: var(--paddingMedium);
+}
+.AboutOurCompany{
+    width: 50%;
+    height: 10rem;
+    flex-direction: column;
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    padding: var(--paddingMedium);
+}
+.footer{
+    background-color:var(--color-black) ;
+    color: var(--color-white);
+    padding: var(--paddingSmall);
+    justify-content: space-around;
+}
+.Media{
+    color: var(--color-dark-blue);
+}
+
+
+/* Media */
+@media only screen and (max-width: 600px){
+    .header,.webApplication,.dataContiner,
+    .boxContainer,.data,.Contact,.contactUs,
+    .AboutOurCompany,.footer,.box {
+       
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+      }
+    .contactUs,
+    .AboutOurCompany{
+       width: 100%;
+    }
+}
+
+@media only screen and (max-width: 460px){
+    .header,.webApplication,.dataContiner,
+    .boxContainer,.data,.Contact,.footer,.box{
+       
+        display: flex;
+        flex-direction: column;
+        gap:5px;
+        min-width: 460px;
+    }
+    .contactUs,
+    .AboutOurCompany{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 161){
+    .header,.webApplication,.dataContiner,
+    .boxContainer,.data,.Contact,.footer,.box{
+       
+        display: flex;
+        flex-direction: column;
+        padding: 0 .5rem;
+        min-height: 650px;
+        min-width: 161px;
+    }
+    .contactUs,
+    .AboutOurCompany{
+        width: 100%;
+    }
+}
