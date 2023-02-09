@@ -16,3 +16,23 @@ const AddData= (value)=>personData.addName(value);
 AddData("Amirmahdi");
 
 console.log(personData.firstName);
+
+
+
+
+//New way
+let data={};
+
+function addValueToData(key){
+
+    let res =function(value){
+        this[key]=value
+    }
+
+    return res.bind(data);
+}
+
+let addMe = addValueToData("firstName");
+addMe("Amir");
+console.log(data)
+
